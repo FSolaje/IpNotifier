@@ -1,0 +1,10 @@
+[Unit]
+Description=Monitor de cambios de IP Pública
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/ruta/a/la/instalacion/NotificarCambioIP.sh
+StandardOutput=journal
+StandardError=journal

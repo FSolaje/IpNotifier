@@ -1,0 +1,12 @@
+[Unit]
+Description=Timer para el Monitor de IP Pública (cada 15 min)
+
+[Timer]
+# Ejecutar 1 minuto después del arranque
+OnBootSec=1min
+# Y luego cada 15 minutos
+OnUnitActiveSec=15min
+Unit=ip-monitor.service
+
+[Install]
+WantedBy=timers.target
